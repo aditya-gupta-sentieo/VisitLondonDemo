@@ -140,6 +140,7 @@ nav a:hover{
 
 .main-content{
 	background: lightgrey;
+	padding-bottom: 16px;
 }
 .image-banner-div{
 	position:relative;
@@ -164,6 +165,7 @@ nav a:hover{
 	margin: 0 auto;
 	background: white;
 	overflow: hidden;
+
 }
 .clear-text{
 	clear:both;
@@ -229,6 +231,46 @@ a:visited{
 
     position: absolute;
     left: -100vw;
+}
+.footer-list{
+	text-align: center;
+}
+.footer-list li{
+	list-style: none;
+	display: inline-block;
+	margin-bottom: 24px;
+	margin-right: 24px;
+}
+.footer-list li a{
+
+	color: black;
+}
+.footer-list ul{
+	justify-content: center;
+	align-items: center;
+}
+.footer-text{
+	margin: 16px;
+	font-size: 10px;
+}
+.grey-bg{
+	background: lightgrey;
+	padding-top: 24px;
+	margin-left: -24px;
+	margin-right: -24px;
+	margin-bottom: 0px;
+}
+
+.footer-list.dividers li:not(:first-child):before {
+    content: " | ";
+		color: grey;
+		padding-right: 24px;
+}
+
+.footer{
+	padding-top: 24px;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 @media only screen and (max-width: 600px) {
 /*
@@ -296,6 +338,11 @@ a:visited{
 	}
 	label::after{
 		content:" ▼"
+	}
+
+	.footer-list.dividers li:not(:first-child):before {
+	    content: "";
+			padding-right: 0px;
 	}
 
 }
