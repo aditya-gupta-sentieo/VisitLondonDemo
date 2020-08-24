@@ -98,14 +98,17 @@ nav a:hover{
 				text-align: center;
 				left:0;
 				right:0;
+
+			  box-sizing: border-box;
+				border: 4px solid red;
+
+				margin-top: 8px;
 }
+
 
 .dropdown:hover .dropdown-menu {
   display:flex;
-  color: red;
-	border: 4px;
-	border-style: solid;
-	margin: 8px;
+	/* margin: 8px; */
 
 }
 .column{
@@ -207,9 +210,25 @@ hr{
 a:hover{
 	text-decoration:underline;
 }
+
+label {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+label:hover{
+	text-decoration: underline;
+}
 a:visited{
 	color:red;
 	text-decoration:none;
+}
+
+.hidden-checkbox{
+
+    position: absolute;
+    left: -100vw;
 }
 @media only screen and (max-width: 600px) {
 /*
@@ -226,14 +245,15 @@ a:visited{
 
 
 	} */
-
-	.main-navigation-links>li {
-	  display: block;
-		margin-left: 0px;
-		text-align: center;
-	  padding-top: 8px;
-		padding-bottom: 8px;
+	.column{
+		display:block;
 	}
+/* .vertical-list > li{
+	/* display: inline; */
+
+	/* align-items:center; */
+	/* padding: 12px; */
+/* }  */
 	.snippet img{
 		hidden:true;
 	}
@@ -244,6 +264,38 @@ a:visited{
 	.header-search-field{
 		margin:0 auto;
 		position:relative;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.dropdown:hover .dropdown-menu{
+		display:none;
+		/* padding: 16px; */
+	}
+	.dropdown-menu img{
+		display:none;
+		/* margin: 8px; */
+	}
+	.dropdown-menu .snippet{
+		border:none;
+		display:block;
+		/* float:none; */
+		clear:both;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 12px;
+	}
+	.dropdown-menu h3{
+		font-size:14px;
+	}
+	.dropdown .hidden-checkbox:checked ~ .dropdown-menu{
+			display:flex;
+	}
+	.dropdown-menu{
+		display:none;
+	}
+	label::after{
+		content:" ▼"
 	}
 
 }
